@@ -1,17 +1,25 @@
+body {
+  background-color: red;
+}
+
 .container {
-  margin-top: 50px;
-  margin-left: 10px;
-  margin-right: 10px;
+  max-width: 100%;
   display: flex;
-  flex-direction: row;
   align-items: flex-start;
-  justify-content: space-around;
-  background-color: yellow;
+  flex-wrap: wrap;
 }
 
 .user-details {
-  background-color: blue;
-  width: 60%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 1em;
+  border-radius: 15px;
+  margin: 50px;
+  flex-grow: 7;
+}
+
+.credit-card-details {
+  background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   padding: 1em;
   border-radius: 15px;
@@ -20,9 +28,7 @@
 }
 
 .purchase-card {
-  background-color: red;
-  margin-left: 50px;
-  width: 40%;
+  background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   padding: 1em;
   border-radius: 15px 50px 30px 5px;

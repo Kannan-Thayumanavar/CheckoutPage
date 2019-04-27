@@ -60,6 +60,8 @@ class App extends Component {
       <div className="container">
         <div className="user-details">
         <Form>
+          <h2>Recepient Details</h2>
+          <br/>
           <Form.Row>
               <Form.Group as={Col} controlId="formName">
                 <Form.Label>Name</Form.Label>
@@ -101,10 +103,6 @@ class App extends Component {
               <Form.Control />
             </Form.Group>
           </Form.Row>
-
-          <Button variant="primary" type="submit">
-            Submit
-          </Button>
         </Form>
         </div>
         
@@ -127,6 +125,34 @@ class App extends Component {
           />
         </div>
 
+        <div className="credit-card-details">
+        <Form>
+          <h2>Credit Card Details</h2>
+          <br/>
+          <Form.Group controlId="formCardName">
+                <Form.Label>Name</Form.Label>
+                <Form.Control type="text" placeholder="John Doe" />
+          </Form.Group>
+          <Form.Group controlId="formCardNumber">
+                <Form.Label>Card Number</Form.Label>
+                <Form.Control type="number" placeholder="1234123412341234" />
+          </Form.Group>
+          <Form.Row>
+              <Form.Group as={Col} controlId="formCardExpiry">
+                <Form.Label>Expiration Date</Form.Label>
+                <Form.Control type="number" placeholder="11/1111" />
+              </Form.Group>
+
+              <Form.Group as={Col} controlId="formCVV">
+                <Form.Label>CVV</Form.Label>
+                <Form.Control type="number" placeholder="1111" />
+              </Form.Group>
+          </Form.Row>
+          <Button className="formCardButton">
+            Make Payment
+          </Button>
+        </Form>
+        </div>
 
       </div>
       
@@ -139,4 +165,3 @@ const mapStateToProps = state => ({
 });
 
 export default connect(mapStateToProps, {handleChange})(App);
-
